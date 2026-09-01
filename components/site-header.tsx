@@ -81,29 +81,35 @@ export function SiteHeader() {
         </div>
       </div>
 
-      {open && (
-        <nav id="mobile-nav" aria-label="Navegación principal móvil" className="border-t border-border bg-background lg:hidden">
-          <div className="mx-auto flex max-w-[1280px] flex-col px-5 py-4 sm:px-6">
-            {nav.map((item) => (
+      <div
+        className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out lg:hidden ${
+          open ? "grid-rows-[1fr] opacity-100" : "pointer-events-none grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="overflow-hidden">
+          <nav id="mobile-nav" aria-label="Navegación principal móvil" className="border-t border-border bg-background">
+            <div className="mx-auto flex max-w-[1280px] flex-col px-5 py-4 sm:px-6">
+              {nav.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-lg px-3 py-3 text-base font-medium text-foreground transition-colors hover:bg-muted"
+                >
+                  {item.label}
+                </a>
+              ))}
               <a
-                key={item.href}
-                href={item.href}
+                href="/#contacto"
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-3 text-base font-medium text-foreground transition-colors hover:bg-muted"
+                className="mt-3 inline-flex items-center justify-center rounded-lg bg-varekta-blue px-5 py-3 text-sm font-semibold text-varekta-white dark:bg-varekta-white dark:text-varekta-blue"
               >
-                {item.label}
+                Hablemos
               </a>
-            ))}
-            <a
-              href="/#contacto"
-              onClick={() => setOpen(false)}
-              className="mt-3 inline-flex items-center justify-center rounded-lg bg-varekta-blue px-5 py-3 text-sm font-semibold text-varekta-white dark:bg-varekta-white dark:text-varekta-blue"
-            >
-              Hablemos
-            </a>
-          </div>
-        </nav>
-      )}
+            </div>
+          </nav>
+        </div>
+      </div>
     </header>
   )
 }

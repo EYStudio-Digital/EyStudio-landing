@@ -15,6 +15,16 @@ const spaceGrotesk = Space_Grotesk({
   display: 'swap',
 })
 
+const themeScript = `
+  try {
+    const saved = localStorage.getItem('varekta-theme');
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const dark = saved ? saved === 'dark' : systemDark;
+    document.documentElement.classList.toggle('dark', dark);
+    document.documentElement.classList.toggle('light', !dark);
+  } catch {}
+`
+
 export const metadata: Metadata = {
   title: 'VAREKTA — Ingeniería digital y tecnología aplicada',
   description:
@@ -59,6 +69,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es-AR" className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="font-sans antialiased">
         <a
           href="#top"

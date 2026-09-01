@@ -50,7 +50,7 @@ export function Projects() {
           <p className="mt-5 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg">Exploramos cómo estrategia, experiencia y tecnología pueden integrarse dentro de una solución digital construida alrededor de un objetivo concreto.</p>
         </Reveal>
 
-        <div className="mt-12 grid gap-8 xl:grid-cols-[1.25fr_0.75fr] xl:items-center">
+        <div id="demo-varekta" className="mt-12 grid scroll-mt-28 gap-8 xl:grid-cols-[1.25fr_0.75fr] xl:items-center">
           <Reveal className="relative rounded-3xl border border-[#26384a] bg-[#0a1728] p-5 sm:p-8">
             <DemoDesktop />
             <div className="absolute bottom-7 right-5 hidden sm:block md:right-9">

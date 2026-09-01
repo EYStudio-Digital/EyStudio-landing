@@ -5,10 +5,10 @@ import { Menu, Moon, Sun, X } from "lucide-react"
 import { Logo } from "@/components/logo"
 
 const nav = [
-  { label: "Servicios", href: "#servicios" },
-  { label: "Proyectos", href: "#proyectos" },
-  { label: "Proceso", href: "#proceso" },
-  { label: "Sobre VAREKTA", href: "#sobre-varekta" },
+  { label: "Servicios", href: "/#servicios" },
+  { label: "Proyectos", href: "/#proyectos" },
+  { label: "Proceso", href: "/#proceso" },
+  { label: "Sobre VAREKTA", href: "/#sobre-varekta" },
 ]
 
 export function SiteHeader() {
@@ -62,7 +62,7 @@ export function SiteHeader() {
           </button>
 
           <a
-            href="#contacto"
+            href="/#contacto"
             className="hidden items-center rounded-lg bg-varekta-blue px-5 py-2.5 text-sm font-semibold text-varekta-white transition-transform hover:-translate-y-0.5 dark:bg-varekta-white dark:text-varekta-blue sm:inline-flex"
           >
             Hablemos
@@ -95,7 +95,7 @@ export function SiteHeader() {
               </a>
             ))}
             <a
-              href="#contacto"
+              href="/#contacto"
               onClick={() => setOpen(false)}
               className="mt-3 inline-flex items-center justify-center rounded-lg bg-varekta-blue px-5 py-3 text-sm font-semibold text-varekta-white dark:bg-varekta-white dark:text-varekta-blue"
             >

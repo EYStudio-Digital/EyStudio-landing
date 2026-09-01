@@ -1,25 +1,31 @@
 import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
+import { SolutionSelector } from "@/components/solution-selector"
 import { Problem } from "@/components/problem"
-import { SolutionFlow } from "@/components/solution-flow"
+import { ValueProposition } from "@/components/value-proposition"
 import { Services } from "@/components/services"
+import { Benefits } from "@/components/benefits"
+import { Projects } from "@/components/projects"
 import { Protocol } from "@/components/protocol"
-import { VisualContext } from "@/components/visual-context"
-import { Differentiators } from "@/components/differentiators"
+import { AboutVarekta } from "@/components/about-varekta"
+import { ContactCta } from "@/components/contact-cta"
 import { SiteFooter } from "@/components/site-footer"
 
 export default function Page() {
   return (
     <>
       <SiteHeader />
-      <main>
+      <main id="top">
         <Hero />
+        <SolutionSelector />
         <Problem />
-        <SolutionFlow />
+        <ValueProposition />
         <Services />
+        <Benefits />
+        <Projects />
         <Protocol />
-        <VisualContext />
-        <Differentiators />
+        <AboutVarekta />
+        <ContactCta />
       </main>
       <SiteFooter />
     </>

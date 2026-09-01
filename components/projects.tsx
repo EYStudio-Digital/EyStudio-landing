@@ -73,7 +73,7 @@ export function Projects() {
               <p className="mt-2 text-xs leading-5 text-slate-200 sm:text-sm">No representa un cliente real ni utiliza métricas, testimonios o resultados comerciales inventados.</p>
             </div>
 
-            <a href="#demo-varekta" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-varekta-electric transition-transform hover:translate-x-1">Ver proyecto <ArrowRight className="h-4 w-4" /></a>
+            <a href="/proyectos/sistema-web-captacion-demo" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-varekta-electric transition-transform hover:translate-x-1">Ver proyecto <ArrowRight className="h-4 w-4" /></a>
           </Reveal>
         </div>
       </div>

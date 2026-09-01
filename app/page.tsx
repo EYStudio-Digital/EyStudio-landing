@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
 import { SolutionSelector } from "@/components/solution-selector"
@@ -10,6 +11,15 @@ import { Protocol } from "@/components/protocol"
 import { AboutVarekta } from "@/components/about-varekta"
 import { ContactCta } from "@/components/contact-cta"
 import { SiteFooter } from "@/components/site-footer"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    url: "/",
+  },
+}
 
 export default function Page() {
   return (

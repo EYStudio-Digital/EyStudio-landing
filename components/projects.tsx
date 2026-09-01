@@ -11,7 +11,7 @@ function DemoDesktop() {
         <span className="h-2 w-2 rounded-full bg-[#9aa7b4]" />
         <span className="h-2 w-2 rounded-full bg-[#25e6c8]" />
       </div>
-      <div className="grid h-[calc(100%-2.25rem)] grid-cols-[1.1fr_0.9fr] gap-6 p-7 text-[#111418] sm:p-9">
+      <div className="grid h-[calc(100%-2.25rem)] grid-cols-1 gap-6 p-7 text-[#111418] sm:grid-cols-[1.1fr_0.9fr] sm:p-9">
         <div className="flex flex-col justify-center">
           <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-[#0b1f3a]">Clínica odontológica · Demo</p>
           <h4 className="mt-4 max-w-sm font-display text-2xl font-bold leading-tight sm:text-3xl">Una experiencia dental más clara desde el primer contacto.</h4>

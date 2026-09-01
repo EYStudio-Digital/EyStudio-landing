@@ -2,10 +2,10 @@ import { Logo } from "@/components/logo"
 import { buildProjectMessage, buildWhatsAppHref } from "@/lib/contact"
 
 const nav = [
-  { label: "Servicios", href: "#servicios" },
-  { label: "Proyectos", href: "#proyectos" },
-  { label: "Proceso", href: "#proceso" },
-  { label: "Sobre VAREKTA", href: "#sobre-varekta" },
+  { label: "Servicios", href: "/#servicios" },
+  { label: "Proyectos", href: "/#proyectos" },
+  { label: "Proceso", href: "/#proceso" },
+  { label: "Sobre VAREKTA", href: "/#sobre-varekta" },
 ]
 
 const whatsappHref = buildWhatsAppHref(buildProjectMessage(null))

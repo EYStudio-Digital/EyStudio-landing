@@ -7,7 +7,7 @@ export function Logo({ variant = "auto" }: LogoProps) {
 
   return (
     <a
-      href="#top"
+      href="/"
       className="inline-flex items-center"
       aria-label="VAREKTA — volver al inicio"
     >

@@ -1,4 +1,5 @@
 import { Logo } from "@/components/logo"
+import { buildProjectMessage, buildWhatsAppHref } from "@/lib/contact"
 
 const nav = [
   { label: "Servicios", href: "#servicios" },
@@ -6,6 +7,8 @@ const nav = [
   { label: "Proceso", href: "#proceso" },
   { label: "Sobre VAREKTA", href: "#sobre-varekta" },
 ]
+
+const whatsappHref = buildWhatsAppHref(buildProjectMessage(null))
 
 export function SiteFooter() {
   return (
@@ -19,7 +22,7 @@ export function SiteFooter() {
 
           <div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">Navegación</p>
-            <nav className="mt-4 flex flex-col gap-3">
+            <nav className="mt-4 flex flex-col gap-3" aria-label="Navegación del footer">
               {nav.map((item) => <a key={item.href} href={item.href} className="text-sm text-slate-300 transition-colors hover:text-varekta-electric">{item.label}</a>)}
             </nav>
           </div>
@@ -27,7 +30,14 @@ export function SiteFooter() {
           <div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-400">Contacto</p>
             <p className="mt-4 text-sm font-medium text-slate-200">¿Tenés un proyecto?</p>
-            <a href="#contacto" className="mt-3 inline-flex text-sm font-semibold text-varekta-electric">Hablar con VAREKTA →</a>
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-3 inline-flex text-sm font-semibold text-varekta-electric transition-transform hover:translate-x-1"
+            >
+              Hablar con VAREKTA →
+            </a>
           </div>
         </div>
 

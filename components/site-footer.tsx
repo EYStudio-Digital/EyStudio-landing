@@ -16,7 +16,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-[1280px] px-5 py-14 sm:px-6 md:py-16 lg:px-8">
         <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
           <div>
-            <div className="[&_a]:text-varekta-white [&_span]:text-varekta-white"><Logo /></div>
+            <Logo variant="negative" />
             <p className="mt-4 max-w-xs font-display text-lg font-bold text-slate-100">Tecnología diseñada para crecer.</p>
           </div>
 

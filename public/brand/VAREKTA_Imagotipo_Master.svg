@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 185" role="img" aria-labelledby="title desc">
+  <title id="title">VAREKTA Imagotipo</title>
+  <desc id="desc">Imagotipo oficial VAREKTA: isotipo master v2.0 + wordmark Space Grotesk 700.</desc>
+  <g aria-label="Isotipo VAREKTA">
+    <polygon points="24,44 52,44 107,105 90,129" fill="#111418"/>
+    <polygon points="187,15 215,12 151,110 123,111" fill="#25E6C8"/>
+    <polygon points="113,124 141,124 115,164 99,142" fill="#111418"/>
+  </g>
+  <text x="257" y="122"
+        fill="#111418"
+        font-family="Space Grotesk, sans-serif"
+        font-size="86"
+        font-weight="700"
+        letter-spacing="-2.58">VAREKTA</text>
+</svg>

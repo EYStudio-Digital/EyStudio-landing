@@ -2,7 +2,7 @@ import { Reveal } from "@/components/reveal"
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden border-b border-border">
+    <section className="relative overflow-hidden border-b border-border">
       <div className="mx-auto grid min-h-[720px] max-w-[1280px] items-center gap-14 px-5 py-20 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-24">
         <div className="relative z-10">
           <Reveal>
@@ -26,7 +26,7 @@ export function Hero() {
           <Reveal delay={240}>
             <div className="mt-9 flex flex-wrap gap-3">
               <a
-                href="#solucion"
+                href="#selector"
                 className="inline-flex items-center rounded-lg bg-varekta-blue px-6 py-3.5 text-sm font-semibold text-varekta-white transition-transform hover:-translate-y-0.5 dark:bg-varekta-white dark:text-varekta-blue"
               >
                 Encontrar mi solución →

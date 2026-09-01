@@ -15,60 +15,52 @@ const spaceGrotesk = Space_Grotesk({
   display: 'swap',
 })
 
+const themeScript = `
+  try {
+    const saved = localStorage.getItem('varekta-theme');
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const dark = saved ? saved === 'dark' : systemDark;
+    document.documentElement.classList.toggle('dark', dark);
+    document.documentElement.classList.toggle('light', !dark);
+  } catch {}
+`
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://eystudio.com'),
-  title: 'EYStudio — Ingeniería digital para convertir visitas en oportunidades',
+  metadataBase: new URL('https://emanuelybalo.com'),
+  title: 'VAREKTA — Ingeniería digital y tecnología aplicada',
   description:
-    'Diseñamos experiencias digitales de alto rendimiento para ayudar a clínicas y empresas a convertir mejor sus oportunidades online.',
-  generator: 'v0.app',
-  applicationName: 'EYStudio',
+    'VAREKTA desarrolla experiencias digitales de alto rendimiento que combinan estrategia, diseño y tecnología para ayudar a empresas a convertir mejor.',
+  applicationName: 'VAREKTA',
   keywords: [
+    'VAREKTA',
     'ingeniería digital',
-    'experiencias web',
-    'conversión',
-    'clínicas odontológicas',
-    'desarrollo web de alto rendimiento',
+    'experiencias digitales',
+    'desarrollo web',
+    'sistemas de conversión',
+    'tecnología aplicada',
   ],
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
     type: 'website',
-    locale: 'es_ES',
-    url: 'https://eystudio.com',
-    siteName: 'EYStudio',
-    title: 'EYStudio — Ingeniería digital para convertir visitas en oportunidades',
+    locale: 'es_AR',
+    siteName: 'VAREKTA',
+    title: 'VAREKTA — Ingeniería digital y tecnología aplicada',
     description:
-      'Diseñamos experiencias digitales de alto rendimiento para ayudar a clínicas y empresas a convertir mejor sus oportunidades online.',
+      'Experiencias digitales de alto rendimiento construidas con estrategia, diseño y tecnología.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'EYStudio — Ingeniería digital para convertir visitas en oportunidades',
+    title: 'VAREKTA — Ingeniería digital y tecnología aplicada',
     description:
-      'Diseñamos experiencias digitales de alto rendimiento para ayudar a clínicas y empresas a convertir mejor sus oportunidades online.',
-  },
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+      'Experiencias digitales de alto rendimiento construidas con estrategia, diseño y tecnología.',
   },
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light',
-  themeColor: '#F8FAFC',
+  colorScheme: 'light dark',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#F8FAFC' },
+    { media: '(prefers-color-scheme: dark)', color: '#0D1117' },
+  ],
 }
 
 export default function RootLayout({
@@ -77,11 +69,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className={`light bg-background ${inter.variable} ${spaceGrotesk.variable}`}>
+    <html lang="es-AR" className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="font-sans antialiased">
         <a
           href="#top"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-primary-foreground"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-varekta-blue focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-varekta-white"
         >
           Saltar al contenido
         </a>

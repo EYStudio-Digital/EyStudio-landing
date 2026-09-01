@@ -26,6 +26,7 @@ const themeScript = `
 `
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://emanuelybalo.com'),
   title: 'VAREKTA — Ingeniería digital y tecnología aplicada',
   description:
     'VAREKTA desarrolla experiencias digitales de alto rendimiento que combinan estrategia, diseño y tecnología para ayudar a empresas a convertir mejor.',

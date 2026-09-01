@@ -31,9 +31,8 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
-          <span>© 2026 VAREKTA. Todos los derechos reservados.</span>
-          <span>Los enlaces legales se incorporarán cuando los textos correspondientes estén validados.</span>
+        <div className="mt-12 border-t border-white/10 pt-6 text-xs text-slate-400">
+          © 2026 VAREKTA. Todos los derechos reservados.
         </div>
       </div>
     </footer>

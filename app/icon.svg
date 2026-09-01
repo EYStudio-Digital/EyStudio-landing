@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-labelledby="title desc">
+  <title id="title">VAREKTA Favicon</title>
+  <desc id="desc">Favicon oficial VAREKTA derivado de la variante micro aprobada.</desc>
+  <rect width="220" height="220" rx="36" fill="#0B1F3A"/>
+  <g transform="translate(0 17.5)">
+    <polygon points="24,44 52,44 107,105 90,129" fill="#F8FAFC"/>
+    <polygon points="187,15 215,12 151,110 123,111" fill="#25E6C8"/>
+  </g>
+</svg>
